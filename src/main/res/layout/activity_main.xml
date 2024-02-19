@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_slotgame">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="297dp"
+        android:layout_height="124dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:columnCount="3"
+        android:rowCount="1">
+
+        <ImageView
+            android:id="@+id/reel1"
+            android:layout_width="85dp"
+            android:layout_height="140dp"
+            android:layout_marginRight="10dp"
+            android:layout_columnWeight="0.1"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_apple" />
+
+        <ImageView
+            android:id="@+id/reel2"
+            android:layout_width="89dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_banana" />
+
+        <ImageView
+            android:id="@+id/reel3"
+            android:layout_width="84dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="5dp"
+            android:layout_columnWeight="0.1"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_cherry" />
+    </GridLayout>
+
+    <ImageView
+        android:id="@+id/btnSpin"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/gridLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_spin"
+        android:clickable="true"
+        android:onClick="onBtnSpinClick"/>
+
+    <ImageView
+        android:id="@+id/slotMachineInstruction"
+        android:layout_width="1000dp"
+        android:layout_height="1000dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/sminstructions"
+        android:onClick="InstructionClicked"/>
+</RelativeLayout>
